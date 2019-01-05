@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <title>Bookmarklets</title>
+</head>
+
+    <body>
+
+        <p>Drag the link below to your bookmark bar:</p>
+
+        <p><a href='javascript:void function(){function t(t){return"google.com"===t||t.endsWith(".google.com")%3F"google":"bing.com"===t||t.endsWith(".bing.com")%3F"bing":""}function e(t){return"google"===t%3F"bing":"bing"===t%3F"google":""}function o(t,e){if("google"===t){if(e.startsWith("https://news.google.com")||-1!==e.indexOf("tbm=nws"))return"news";if(-1!==e.indexOf("tbm=isch"))return"images";if(-1!==e.indexOf("tbm=vid"))return"videos"}if("bing"===t){if(e.startsWith("https://www.bing.com/news"))return"news";if(e.startsWith("https://www.bing.com/images"))return"images";if(e.startsWith("https://www.bing.com/videos"))return"videos"}return""}function n(t){var e=/\/search(\%3F|\%3F.+%26)q=([^%26]+)/g,o=e.exec(t);if(null!==o)return o[2];if(t.startsWith("https://news.google.com")){var n=document.getElementsByClassName("OJMBqe");if(n.length>0)return n[n.length-1].innerText}return""}function s(t,e,o){var n=o.replace("+"," ").toLowerCase();return"google"===t%3F"news"===e%3F""===o||"top stories"===n||"for you"===n%3F"https://news.google.com":"https://www.google.com/search%3Fq="+o+"%26tbm=nws":"images"===e%3F"https://www.google.com/search%3Fq="+o+"%26tbm=isch":"videos"===e%3F"https://www.google.com/search%3Fq="+o+"%26tbm=vid":""===o%3F"https://www.google.com":"https://www.google.com/search%3Fq="+o:"bing"===t%3F"news"===e%3F"https://www.bing.com/news/search%3Fq="+o:"images"===e%3F"https://www.bing.com/images/search%3Fq="+o:"videos"===e%3F"https://www.bing.com/videos/search%3Fq="+o:""===o%3F"https://www.bing.com":"https://www.bing.com/search%3Fq="+o:"about:blank"}function i(i,g){var w=t(i),r=o(w,g),c=n(g),h=e(w);return s(h,r,c)}window.open(i(location.hostname,location.href))}();'>Switch Bing and Google</a><br />
+        This bookmarklet allows you to switch between Bing and Google with one click. Supports news/image/video verticals.</p>
+
+        <p>Made with <a href="http://bookmarklets.org/maker/">Bookmarklet Maker</a></p>
+    </body>
+</html>
+
